@@ -41,7 +41,8 @@
 
         /* The Bush Visual */
         .bush {
-            font-size: 4rem; /* Big Emoji */
+            width: 80px;      /* <--- ADD THIS */
+            height: 80px;
             position: relative;
             z-index: 2; /* In front of Faker */
             transition: transform 0.1s;
@@ -127,9 +128,9 @@
                 container.onclick = () => checkBush(i);
 
                 // Create the Bush (Emoji)
-                const bush = document.createElement('div');
+                const bush = document.createElement('img'); // Change 'div' to 'img'
+                bush.src = "bush.png"; // <--- PUT YOUR IMAGE NAME HERE
                 bush.classList.add('bush');
-                bush.innerText = '🌳';
 
                 // Create Faker (Hidden Image)
                 const img = document.createElement('img');
