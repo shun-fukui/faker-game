@@ -97,9 +97,9 @@
 </head>
 <body>
 
-    <h1>Find Faker in the Bush</h1>
-    <p>Click a bush to find the Unkillable Demon King.</p>
-    <h3 id="status">Status: Hidden...</h3>
+    <h1>Find Hide on Bush</h1>
+    <p>Click a bush to find the Unkillable Demon King</p>
+    <h3 id="status">Hiding...</h3>
 
     <div id="game-board">
         </div>
@@ -162,13 +162,13 @@
                 // --- WIN CONDITION ---
                 const correctContainer = gameBoard.children[fakerPosition];
                 correctContainer.classList.add('reveal');
-                statusText.innerText = "VICTORY! You found him!";
+                statusText.innerText = "Legends Never Die";
                 statusText.style.color = "#2ecc71";
                 
                 setTimeout(() => {
                     alert("You found Faker! Starting new round.");
                     correctContainer.classList.remove('reveal');
-                    statusText.innerText = "Status: Hidden...";
+                    statusText.innerText = "Hiding...";
                     statusText.style.color = "#ecf0f1";
                     placeFaker();
                 }, 500);
@@ -176,7 +176,7 @@
             } else {
                 // --- LOSE/MISS CONDITION ---
                 isRevealing = true;
-                statusText.innerText = "Missed! Watch closely...";
+                statusText.innerText = "Faker Calling...";
                 statusText.style.color = "#e74c3c";
 
                 // 1. Shake the wrong bush
